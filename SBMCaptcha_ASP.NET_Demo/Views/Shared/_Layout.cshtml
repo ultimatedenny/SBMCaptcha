@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "SBM Captcha (MVC)";
+}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="author" content="PT SHIMANO BATAM © @DateTime.Now.Year" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/sbm-captcha")
+    @RenderSection("scripts", required: false)
+</head>
+<body>
+    <div class="container">
+        <div class="logo-text">
+            <a href="#" target="_blank">
+                <span>SBM</span> Captcha (MVC)
+            </a>
+        </div>
+
+        @RenderBody()
+
+        <div class="copyright">
+            <p>Copyright &copy; @DateTime.Now.Year</p>
+        </div>
+    </div>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+
+</body>
+</html>

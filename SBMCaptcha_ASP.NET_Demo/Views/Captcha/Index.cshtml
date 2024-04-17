@@ -1,0 +1,34 @@
+﻿
+<div class="section">
+    <form action="SubmitForm" method="post">
+        <div class="captcha-holder"></div>
+        <input type="submit" value="Submit demo captcha" class="btn">
+    </form>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('.captcha-holder').sbmCaptcha({
+            captchaTheme: ["light"],
+            captchaFontFamily: '',
+            captchaClickDelay: 500,
+            captchaHoverDetection: true,
+            enableLoadingAnimation: true,
+            loadingAnimationDelay: 1500,
+            showCredits: 'show',
+            requestIconsDelay: 1500, 
+            captchaAjaxFile: '/SBMCAPTCHA_MVC/Captcha/GetCaptcha/',
+            captchaMessages: {
+                header: "Select image are different.",
+                correct: {
+                    top: "Success!",
+                    bottom: "Verification success."
+                },
+                incorrect: {
+                    top: "Failed!",
+                    bottom: "Verification failed."
+                }
+            }
+        });
+    });
+</script>
